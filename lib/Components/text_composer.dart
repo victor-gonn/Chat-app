@@ -21,26 +21,7 @@ class TextComposer extends StatefulWidget {
 
 class _TextComposerState extends State<TextComposer> {
 
-  final GoogleSignIn googleSingIn = GoogleSignIn();
-
-  void _GetUser() async {
-    try {
-      final GoogleSignInAccount? googleSignInAccount = 
-      await googleSingIn.signIn();
-
-      final GoogleSignInAuthentication googleSignInAuthentication = 
-      await googleSignInAccount!.authentication;
-
-      final AuthCredential credential = GoogleAuthProvider.credential(
-        idToken: googleSignInAuthentication.idToken,
-        accessToken: googleSignInAuthentication.accessToken);
-
-
-
-    } catch(error){
-
-    }
-  }
+  
   
 
 final TextEditingController _controller = TextEditingController();  
